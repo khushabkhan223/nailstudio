@@ -1,0 +1,42 @@
+.container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.blob1 {
+  width: 700px;
+  height: 700px;
+  top: -150px;
+  left: -150px;
+  background: radial-gradient(ellipse, rgba(232, 160, 191, 0.18), transparent 70%);
+  animation: blobDrift1 18s ease-in-out infinite alternate;
+}
+
+.blob2 {
+  width: 550px;
+  height: 550px;
+  bottom: -100px;
+  right: -100px;
+  background: radial-gradient(ellipse, rgba(186, 144, 198, 0.14), transparent 70%);
+  animation: blobDrift2 22s ease-in-out infinite alternate;
+  animation-delay: -7s;
+}
+
+.blob3 {
+  width: 450px;
+  height: 450px;
+  top: 50%;
+  left: 50%;
+  background: radial-gradient(ellipse, rgba(212, 168, 83, 0.09), transparent 70%);
+  animation: blobDrift3 16s ease-in-out infinite alternate;
+  animation-delay: -11s;
+}

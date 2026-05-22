@@ -1,0 +1,327 @@
+.section {
+  padding: 120px 80px;
+  position: relative;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.tagLine {
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.45;
+  border-radius: 1px;
+}
+
+/* Glass panel */
+.panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 26px;
+  padding: 52px;
+  box-shadow:
+    inset 0px 2px 4px rgba(255, 255, 255, 0.32),
+    0 12px 48px rgba(45, 34, 38, 0.07);
+  margin-bottom: 32px;
+}
+
+/* Info Column */
+.title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--text-dark);
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-light);
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+
+.contactList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contactIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.contactText {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-dark);
+  line-height: 1.55;
+}
+
+.quote {
+  padding: 18px 22px;
+  background: rgba(232, 160, 191, 0.09);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 14px 14px 0;
+}
+
+.quoteText {
+  font-family: var(--font-script);
+  font-size: 24px;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+/* Form Column */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dark);
+  letter-spacing: 0.2px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid rgba(232, 160, 191, 0.32);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.62);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.22s, box-shadow 0.22s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(232, 160, 191, 0.16);
+}
+
+.input::placeholder {
+  color: var(--text-light);
+  opacity: 0.75;
+}
+
+/* Select */
+.selectWrapper {
+  position: relative;
+}
+
+.selectWrapper .input {
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* Textarea */
+.textarea {
+  resize: vertical;
+  min-height: 90px;
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+.submitBtn {
+  padding: 16px 38px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 22px rgba(232, 160, 191, 0.38);
+  will-change: transform;
+  width: 100%;
+  letter-spacing: 0.2px;
+  transition: box-shadow 0.2s;
+}
+
+/* Map Placeholder */
+.mapPlaceholder {
+  position: relative;
+  height: 300px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #f0eaf5 0%, #e8e0ec 50%, #ede4f0 100%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 28px rgba(45, 34, 38, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(186, 144, 198, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(186, 144, 198, 0.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.mapText {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-light);
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 18px 28px;
+  box-shadow: 0 10px 40px rgba(45, 34, 38, 0.14);
+  z-index: 400;
+  white-space: nowrap;
+}
+
+.toastIcon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.toastTitle {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.toastSub {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+@media (max-width: 1100px) {
+  .section {
+    padding: 80px 40px;
+  }
+
+  .panel {
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .panel {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 28px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .toast {
+    width: calc(100vw - 48px);
+    white-space: normal;
+    bottom: 80px;
+  }
+}
